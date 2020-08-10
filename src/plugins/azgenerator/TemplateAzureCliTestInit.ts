@@ -79,7 +79,7 @@ export function GenerateAzureCliTestInit(model: CodeModelAz): string[] {
     output.push('            print("step exception: ", e)');
     output.push('            print("--------------------------------------", file=sys.stderr)');
     output.push('            print("step exception in {}: {}".format(func.__name__, e), file=sys.stderr)');
-    // output.push('            traceback.print_exc()');
+    output.push('            traceback.print_exc()');
     output.push('            exceptions.append((func.__name__, sys.exc_info()))');
     output.push('        else:');
     output.push('            test_map[func.__name__]["end_dt"] = dt.datetime.utcnow()');
